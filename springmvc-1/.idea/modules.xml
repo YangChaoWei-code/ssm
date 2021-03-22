@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../mybatis1/mybatis1.iml" filepath="$PROJECT_DIR$/../mybatis1/mybatis1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis10/mybatis10.iml" filepath="$PROJECT_DIR$/../mybatis10/mybatis10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis2/mybatis2.iml" filepath="$PROJECT_DIR$/../mybatis2/mybatis2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis3/mybatis3.iml" filepath="$PROJECT_DIR$/../mybatis3/mybatis3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis4/mybatis4.iml" filepath="$PROJECT_DIR$/../mybatis4/mybatis4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis5/mybatis5.iml" filepath="$PROJECT_DIR$/../mybatis5/mybatis5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis6/mybatis6.iml" filepath="$PROJECT_DIR$/../mybatis6/mybatis6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis7/mybatis7.iml" filepath="$PROJECT_DIR$/../mybatis7/mybatis7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis8/mybatis8.iml" filepath="$PROJECT_DIR$/../mybatis8/mybatis8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mybatis9/mybatis9.iml" filepath="$PROJECT_DIR$/../mybatis9/mybatis9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc-1.iml" filepath="$PROJECT_DIR$/springmvc-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springmvc-2/springmvc-2.iml" filepath="$PROJECT_DIR$/../springmvc-2/springmvc-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springmvc-3/springmvc-3.iml" filepath="$PROJECT_DIR$/../springmvc-3/springmvc-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springmvc-4/springmvc-4.iml" filepath="$PROJECT_DIR$/../springmvc-4/springmvc-4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springmvc-5/springmvc-5.iml" filepath="$PROJECT_DIR$/../springmvc-5/springmvc-5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springmvc-6/springmvc-6.iml" filepath="$PROJECT_DIR$/../springmvc-6/springmvc-6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ssm/ssm.iml" filepath="$PROJECT_DIR$/../ssm/ssm.iml" />
+    </modules>
+  </component>
+</project>

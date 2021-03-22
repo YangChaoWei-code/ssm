@@ -1,0 +1,50 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.TypeMapper">
+    <!--根据商品类型编号查询商品类型信息-->
+    <select id="findTypeById" parameterType="int" resultMap="typeMap">
+        select * from type where id = #{id}
+    </select>
+<!--    查询结果映射-->
+    <resultMap id="typeMap" type="Type">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+<!--        一对多关联映射-->
+        <collection property="pis" column="id" select="com.mybatis.mapper.ProductInfoMapper.findProductInfoById">
+        </collection>
+    </resultMap>
+
+<!--    使用嵌套结果查询方式实现一对多关联查询-->
+    <select id="findTypeById2" parameterType="int" resultMap="typeMap2">
+        select
+        t.id tid, t.name tname, pi.* from type t, product_info pi where pi.tid = t.id and t.id=#{id}
+    </select>
+
+    <resultMap id="typeMap2" type="Type">
+        <id property="id" column="tid" />
+        <result property="name" column="tname" />
+        <!--        一对多关联映射-->
+        <collection property="pis" ofType="ProductInfo">
+            <id property="id" column="id" />
+            <result property="code" column="code" />
+            <result property="name" column="name" />
+        </collection>
+    </resultMap>
+
+<!--    向type表插入数据-->
+    <insert id="addType" parameterType="Type">
+#         插入数据，并获得刚插入数据表type的记录id
+        <selectKey keyProperty="id" resultType="int" order="AFTER">
+            SELECT
+            LAST_INSERT_ID() AS ID
+        </selectKey>
+        insert into type(name) values(#{name})
+    </insert>
+
+<!--    删除数据-->
+    <delete id="deleteTypeById" parameterType="int">
+        delete from product_info where tid = #{id};
+        delete from type where id = #{id};
+    </delete>
+</mapper>

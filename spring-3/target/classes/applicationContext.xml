@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 配置一个bean，将指定类配置给Spring，让Spring来创建其对象的实例 -->
+<!--	<bean id="helloSpring" class="com.ssm.HelloSpring" scope="singleton">-->
+<!--		&lt;!&ndash; 为属性赋值 &ndash;&gt;-->
+<!--		<property name="userName" value="张三"></property>-->
+<!--	</bean>-->
+	<bean id="helloSpring" class="com.ssm.HelloSpring" scope="prototype">
+		<!-- 为属性赋值 -->
+		<property name="userName" value="张三"></property>
+	</bean>
+
+	<bean id="adminInfo" class="com.ssm.AdminInfo">
+		<property name="id" value="5"></property>
+		<constructor-arg name="name" value="admin" />
+		<constructor-arg name="pwd" value="123456" />
+	</bean>
+<!--	使用p命名空间法注入-->
+    <bean id="admin" class="com.ssm.AdminInfo" p:id="8" p:name="yzpc"
+			p:pwd="yzpc"/>
+	
+</beans>
+

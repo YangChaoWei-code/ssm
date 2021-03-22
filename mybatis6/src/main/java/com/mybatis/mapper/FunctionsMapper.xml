@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.mybatis.mapper.FunctionsMapper">
+    <!--根据管理员id获取其功能权限列表-->
+    <select id="findFunctionsByAid" parameterType="int" resultType="Functions">
+        select * from functions f where id in (
+            select fid from powers where aid = #{id}
+            )
+    </select>
+</mapper>

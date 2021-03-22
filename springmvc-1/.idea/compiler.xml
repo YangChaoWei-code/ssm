@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="mybatis1" target="8" />
+      <module name="mybatis10" target="8" />
+      <module name="mybatis2" target="8" />
+      <module name="mybatis3" target="8" />
+      <module name="mybatis4" target="8" />
+      <module name="mybatis5" target="8" />
+      <module name="mybatis6" target="8" />
+      <module name="mybatis7" target="8" />
+      <module name="mybatis8" target="8" />
+      <module name="mybatis9" target="8" />
+      <module name="springmvc-1" target="8" />
+      <module name="springmvc-2" target="8" />
+      <module name="springmvc-3" target="8" />
+      <module name="springmvc-4" target="8" />
+      <module name="springmvc-5" target="8" />
+      <module name="springmvc-6" target="8" />
+      <module name="ssm" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mybatis1" options="-proc:none -parameters" />
+      <module name="mybatis10" options="-proc:none -parameters" />
+      <module name="mybatis2" options="-proc:none -parameters" />
+      <module name="mybatis3" options="-proc:none -parameters" />
+      <module name="mybatis4" options="-proc:none -parameters" />
+      <module name="mybatis5" options="-proc:none -parameters" />
+      <module name="mybatis6" options="-proc:none -parameters" />
+      <module name="mybatis7" options="-proc:none -parameters" />
+      <module name="mybatis8" options="-proc:none -parameters" />
+      <module name="mybatis9" options="-proc:none -parameters" />
+      <module name="springmvc-1" options="-proc:none -parameters" />
+      <module name="springmvc-2" options="-proc:none -parameters" />
+      <module name="springmvc-3" options="-proc:none -parameters" />
+      <module name="springmvc-4" options="-proc:none -parameters" />
+      <module name="springmvc-5" options="-proc:none -parameters" />
+      <module name="springmvc-6" options="-proc:none -parameters" />
+      <module name="ssm" options="-proc:none -parameters" />
+    </option>
+  </component>
+</project>

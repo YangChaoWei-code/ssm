@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <mvc:default-servlet-handler/>
+    <!--    配置自动扫描的包-->
+    <context:component-scan base-package="com.springmvc" />
+    <mvc:annotation-driven conversion-service="conversionService"/>
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.springmvc.converter.StringToDateConverter" p:datePattern="yyyy-MM-dd"></bean>
+            </list>
+        </property>
+    </bean>
+    <!--    配置视图解析器，将控制器方法返回的逻辑视图解析为物理视图-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/ch10/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <mvc:view-controller path="/success" view-name="success"/>
+    <mvc:view-controller path="/index" view-name="index"/>
+
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="50" />
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+<!--        设置上传文件的最大尺寸为1MB-->
+        <property name="maxUploadSize" value="1048576" />
+<!--        字符编码-->
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+</beans>

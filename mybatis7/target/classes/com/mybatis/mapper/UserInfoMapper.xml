@@ -1,0 +1,99 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.UserInfoMapper">
+<!--    动态SQL之<if>元素-->
+    <select id="findUserInfoByUserNameWithIf" parameterType="UserInfo" resultType="UserInfo">
+        select * from user_info ui
+        <if test="userName != null and userName != ''">
+            where ui.userName LIKE CONCAT(CONCAT('%', #{userName}), '%')
+        </if>
+    </select>
+
+<!--    动态SQL之<where>、<if>元素-->
+    <select id="findUserInfoByUserNameAndStatus" parameterType="UserInfo" resultType="UserInfo">
+        select * from user_info ui
+        <where>
+            <if test="userName != null and userName != ''">
+                ui.userName LIKE CONCAT(CONCAT('%', #{userName}), '%')
+            </if>
+            <if test="status>-1">
+                and ui.status = #{status}
+            </if>
+        </where>
+    </select>
+
+<!--    动态SQL之<set>、<if>元素-->
+    <update id="updateUserInfo2" parameterType="UserInfo">
+        update user_info ui
+        <set>
+            <if test="userName!=null and userName!=''">
+                ui.userName=#{userName},
+            </if>
+            <if test="password!=null and password!=''">
+                ui.password=#{password}
+            </if>
+        </set>
+        where ui.id=#{id}
+    </update>
+
+<!--    动态SQL之<trim>元素1-->
+    <select id="findUserInfoByUserNameWithIf_Trim" parameterType="UserInfo" resultType="UserInfo">
+        select * from user_info ui
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="userName!=null and userName!=''">
+                ui.userName LIKE CONCAT(CONCAT('%', #{userName}), '%')
+            </if>
+            <if test="status>-1">
+                and ui.status = #{status}
+            </if>
+        </trim>
+    </select>
+
+    <!--    动态SQL之<set>、<if>元素-->
+    <update id="updateUserInfo2_trim" parameterType="UserInfo">
+        update user_info ui
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userName!=null and userName!=''">
+                ui.userName=#{userName},
+            </if>
+            <if test="password!=null and password!=''">
+                ui.password=#{password}
+            </if>
+        </trim>
+        where ui.id=#{id}
+    </update>
+
+<!--    动态SQL之<choose>、<when>和<otherwise>元素-->
+    <select id="findUserInfo_Choose" parameterType="UserInfo" resultType="UserInfo">
+        select * from user_info ui
+        <where>
+            <choose>
+                <when test="userName!=null and userName!=''">
+                    ui.userName LIKE CONCAT(CONCAT('%', #{userName}), '%')
+                </when>
+                <when test="status>-1">
+                    and ui.status = #{status}
+                </when>
+                <otherwise></otherwise>
+            </choose>
+        </where>
+    </select>
+
+<!--    动态SQL之<foreach>元素-->
+    <select id="findUserInfoByIds" resultType="UserInfo">
+        select * from user_info ui where ui.id in
+        <foreach collection="list" item="ids" open="(" separator=","
+                 close=")">
+            #{ids}
+        </foreach>
+    </select>
+
+    <select id="findUserInfoByIds2" resultType="UserInfo">
+        select * from user_info ui where ui.id in
+        <foreach collection="array" item="ids" open="(" separator=","
+                 close=")">
+            #{ids}
+        </foreach>
+    </select>
+</mapper>

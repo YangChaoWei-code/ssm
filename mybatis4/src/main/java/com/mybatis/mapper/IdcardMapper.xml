@@ -1,0 +1,9 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.IdcardMapper">
+<!--根据id查询身份证信息-->
+    <select id="findIdcardById" parameterType="int" resultType="Idcard">
+        select * from idcard where id=#{id}
+    </select>
+</mapper>

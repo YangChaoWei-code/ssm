@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis1" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis10" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis2" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis3" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis4" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis5" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis6" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis7" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis8" />
+    <file type="web" url="file://$PROJECT_DIR$/../mybatis9" />
+    <file type="web" url="file://$PROJECT_DIR$" />
+    <file type="web" url="file://$PROJECT_DIR$/../springmvc-2" />
+    <file type="web" url="file://$PROJECT_DIR$/../springmvc-3" />
+    <file type="web" url="file://$PROJECT_DIR$/../springmvc-4" />
+    <file type="web" url="file://$PROJECT_DIR$/../springmvc-5" />
+    <file type="web" url="file://$PROJECT_DIR$/../springmvc-6" />
+    <file type="web" url="file://$PROJECT_DIR$/../ssm" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../springmvc-2/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../springmvc-3/pom.xml" />
+        <option value="$PROJECT_DIR$/../springmvc-4/pom.xml" />
+        <option value="$PROJECT_DIR$/../springmvc-5/pom.xml" />
+        <option value="$PROJECT_DIR$/../springmvc-6/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis1/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis1/src/mybatis2/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis2/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis3/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis4/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis5/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis6/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis7/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis8/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis9/pom.xml" />
+        <option value="$PROJECT_DIR$/../mybatis10/pom.xml" />
+        <option value="$PROJECT_DIR$/../ssm/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.PersonMapper">
+<!--根据id查询个人信息-->
+    <select id="findPersonById" parameterType="int" resultMap="personMap">
+        select * from person where id=#{id}
+    </select>
+<!--    查询语句查询结果映射-->
+    <resultMap id="personMap" type="Person">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="age" column="age" />
+        <result property="sex" column="sex" />
+<!--        一对一关联映射-->
+        <association property="idcard" column="cid"
+                     select="com.mybatis.mapper.IdcardMapper.findIdcardById" javaType="Idcard" />
+    </resultMap>
+</mapper>

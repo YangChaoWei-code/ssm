@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <mvc:default-servlet-handler/>
+    <!--    配置自动扫描的包-->
+    <context:component-scan base-package="com.springmvc" />
+    <mvc:annotation-driven conversion-service="conversionService"/>
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.springmvc.converter.StringToDateConverter" p:datePattern="yyyy-MM-dd"></bean>
+            </list>
+        </property>
+    </bean>
+    <!--    配置视图解析器，将控制器方法返回的逻辑视图解析为物理视图-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/ch11/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <mvc:view-controller path="/success" view-name="success"/>
+    <mvc:view-controller path="/index" view-name="index"/>
+
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="50" />
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+<!--        设置上传文件的最大尺寸为1MB-->
+        <property name="maxUploadSize" value="1048576" />
+<!--        字符编码-->
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+<!--        国际化资源文件名-->
+        <property name="basename" value="message" />
+    </bean>
+<!-- AcceptHeaderLocaleResolver因为是默认语言区域解析，可不配置-->
+<!--    <bean id="localResolver" class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver" />-->
+<!-- SessionLocaleResolver配置-->
+<!--    <bean id="localResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />-->
+    <!-- CookieLocaleResolver配置 -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/>
+<!--    <mvc:interceptors>-->
+<!--    如果采用基于Session/Cookie的国际化，必须配置国际化操作的拦截器-->
+<!--        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />-->
+<!--    </mvc:interceptors>-->
+    <!-- 单个拦截器示例 -->
+<!--    <mvc:interceptors>-->
+<!--    使用bean直接定义在<mvc:interceptors>下面的拦截器将拦截所有请求-->
+<!--        <bean class="com.springmvc.interceptor.MyInterceptor" />-->
+<!--    </mvc:interceptors>-->
+    <!-- 多个拦截器示例 -->
+<!--    <mvc:interceptors>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/**"/>-->
+<!--            <bean class="com.springmvc.interceptor.MyInterceptor1"/>-->
+<!--        </mvc:interceptor>-->
+<!--        <mvc:interceptor>-->
+<!--            <mvc:mapping path="/hello"/>-->
+<!--            <bean class="com.springmvc.interceptor.MyInterceptor2" />-->
+<!--        </mvc:interceptor>-->
+<!--    </mvc:interceptors>-->
+
+    <!-- 登录拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.springmvc.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>

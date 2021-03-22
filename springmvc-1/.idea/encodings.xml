@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../mybatis1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis10/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis4/src/main/java/com/mybatis/pojo/Person.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis4/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis7/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis8/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mybatis9/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-3/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-4/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-5/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springmvc-6/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ssm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ssm/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

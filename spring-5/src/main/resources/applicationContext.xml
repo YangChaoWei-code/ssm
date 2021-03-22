@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+<!--	实例化业务类的Bean-->
+	<bean id="productService" class="com.ssm.service.impl.ProductServiceImpl"></bean>
+<!--	实例化日志通知/增强处理类(切面)的bean-->
+	<bean id="allLogAdvice" class="com.ssm.aop.AllLogAdvice"/>
+<!--	配置aop-->
+	<aop:config>
+<!--		配置日志切面-->
+		<aop:aspect id="logaop" ref="allLogAdvice">
+<!--			定义切入点，切入点采用正则表达式，含义是对browse的方法进行拦截-->
+			<aop:pointcut id="logpointcut" expression="execution(public void
+			browse(String,String))" />
+<!--			将日志通知类中的myBeforeAdvice方法指定为前置通知-->
+<!--			<aop:before method="myBeforeAdvice" pointcut-ref="logpointcut"/>-->
+<!--			<aop:after-returning method="myAfterReturnAdvice" pointcut-ref="logpointcut" />-->
+<!--			<aop:after-throwing method="myThrowingAdvice" pointcut-ref="logpointcut" throwing="e" />-->
+			<aop:around method="myAroundAdvice" pointcut-ref="logpointcut" />
+		</aop:aspect>
+	</aop:config>
+</beans>
+
+

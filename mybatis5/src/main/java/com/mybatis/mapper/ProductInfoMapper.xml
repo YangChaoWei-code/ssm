@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.ProductInfoMapper">
+    <!--根据类型编号查询商品信息-->
+    <select id="findProductInfoById" parameterType="int" resultType="ProductInfo">
+        select * from product_info where tid=#{id}
+    </select>
+
+<!--    向product_info表插入数据-->
+    <insert id="addProductInfo" parameterMap="addProductInfoPMap">
+        insert into
+        product_info(code, name, tid) values (#{code}, #{name}, #{type.id})
+    </insert>
+    <parameterMap id="addProductInfoPMap" type="ProductInfo">
+        <parameter property="code" />
+        <parameter property="name" />
+        <parameter property="type.id" />
+    </parameterMap>
+</mapper>
