@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="easyui_demo" target="8" />
+      <module name="ecpbm" target="8" />
       <module name="mybatis1" target="8" />
       <module name="mybatis10" target="8" />
       <module name="mybatis2" target="8" />
@@ -23,6 +25,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="easyui_demo" options="-proc:none -parameters" />
+      <module name="ecpbm" options="-proc:none -parameters" />
       <module name="mybatis1" options="-proc:none -parameters" />
       <module name="mybatis10" options="-proc:none -parameters" />
       <module name="mybatis2" options="-proc:none -parameters" />

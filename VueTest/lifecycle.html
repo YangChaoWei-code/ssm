@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+            created: function () {
+                console.group('created 创建完毕状态==============>>');
+                // undefined
+                console.log("%c%s", "color:red", "el : " + this.$el);
+                // 已被初始化
+                console.log("%c%s", "color:red", "message: " + this.message);
+            },
+            mounted: function (){
+                console.group('mounted 挂载结束状态==============>>');
+                // 已被初始化
+                console.log("%c%s", "color:red", "el : " + this.$el);
+                console.log(this.$el);
+                // 已被初始化
+                console.log("%c%s", "color:red", "message: " + this.message);
+            }
+        })
+    </script>
+</body>
+</html>

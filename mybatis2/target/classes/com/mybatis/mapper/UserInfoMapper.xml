@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.UserInfoMapper">
+<!--    根据用户编号查询用户信息-->
+    <select id="findUserInfoById" parameterType="int" resultType="UserInfoMap">
+        select * from user_info where id = #{id}
+    </select>
+    <resultMap id="userInfoMap" type="UserInfo">
+        <id property="uid" column="id" />
+        <result property="uname" column="userName" />
+        <result property="upass" column="password" />
+    </resultMap>
+</mapper>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input v-model="parentMessage">
+        <br>
+        <child v-bind:message="parentMessage"></child>
+    </div>
+    <script>
+        // 注册全局组件
+        Vue.component('child', {
+            // 声明props,期望从父组件获取数据message
+            props: ['message'],
+            template: '<span>{{message}}</span>'
+        })
+        // 创建根实例
+        var app = new Vue({
+            el: '#app',
+            data: {
+                parentMessage: ''
+            }
+        })
+    </script>
+</body>
+</html>

@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../BootStrapTest/BootStrapTest.iml" filepath="$PROJECT_DIR$/../BootStrapTest/BootStrapTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BootStrapTests/BootStrapTests.iml" filepath="$PROJECT_DIR$/BootStrapTests/BootStrapTests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../VueTest/VueTest.iml" filepath="$PROJECT_DIR$/../VueTest/VueTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../easyui_demo/easyui_demo.iml" filepath="$PROJECT_DIR$/../easyui_demo/easyui_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ecpbm/ecpbm.iml" filepath="$PROJECT_DIR$/../ecpbm/ecpbm.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mybatis1/mybatis1.iml" filepath="$PROJECT_DIR$/../mybatis1/mybatis1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mybatis10/mybatis10.iml" filepath="$PROJECT_DIR$/../mybatis10/mybatis10.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mybatis2/mybatis2.iml" filepath="$PROJECT_DIR$/../mybatis2/mybatis2.iml" />

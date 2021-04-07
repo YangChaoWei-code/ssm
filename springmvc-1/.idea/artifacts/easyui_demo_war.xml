@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="easyui_demo:war">
+    <output-path>$PROJECT_DIR$/../easyui_demo/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>easyui_demo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="easyui_demo-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="easyui_demo:war exploded" />
+    </root>
+  </artifact>
+</component>

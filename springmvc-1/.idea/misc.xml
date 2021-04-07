@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../easyui_demo" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecpbm" />
     <file type="web" url="file://$PROJECT_DIR$/../mybatis1" />
     <file type="web" url="file://$PROJECT_DIR$/../mybatis10" />
     <file type="web" url="file://$PROJECT_DIR$/../mybatis2" />
@@ -40,6 +42,8 @@
         <option value="$PROJECT_DIR$/../mybatis9/pom.xml" />
         <option value="$PROJECT_DIR$/../mybatis10/pom.xml" />
         <option value="$PROJECT_DIR$/../ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/../easyui_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecpbm/pom.xml" />
       </list>
     </option>
   </component>

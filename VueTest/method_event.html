@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        购买数量: {{quantity}}
+        <button @click="add()"> + </button>
+        <button v-if="quantity > 1" @click="subtract()"> - </button>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                quantity: 1
+            },
+            methods:{
+                add: function (quantity) {
+                    quantity = quantity || 1;
+                    // this指向当前Vue实例app
+                    this.quantity += 1;
+                },
+                subtract: function (quantity) {
+                    quantity = quantity || 1;
+                    // this指向当前Vue实例app
+                    this.quantity -= 1;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

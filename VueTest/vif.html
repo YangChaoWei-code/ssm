@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-if="score>=90">优秀</p>
+        <p v-else-if="score>=80">良好</p>
+        <p v-else-if="score>=70">中等</p>
+        <p v-else-if="score>=60">及格</p>
+        <p v-else>不及格</p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                score: 85
+            }
+        })
+    </script>
+</body>
+</html>

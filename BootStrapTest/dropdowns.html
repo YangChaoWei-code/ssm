@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 引入 Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入jQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- 包括所有已编译的插件 -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .dropdown-menu li a {
+            padding: 3px 20px;
+            font-weight: normal;
+            line-height: 1.42857;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container" style="margin-top:20px">
+    <div class="dropdown">
+        <button class="btn dropdown-toggle" id="mydropdownmenu" data-toggle="dropdown">下拉菜单</button>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="#">社区</a>
+            </li>
+            <li>
+                <a href="#">服务</a>
+            </li>
+            <li>
+                <a href="#">俱乐部</a>
+            </li>
+            <li class="divider"></li>
+            <!--分割线divider-->
+            <li>
+                <a href="#">交友</a>
+            </li>
+            <li class="dropdown-header">友情链接</li>
+            <!--标题dropdown-header-->
+            <li>
+                <a href="#">邮箱</a>
+            </li>
+            <li>
+                <a rhref="#">苏宁</a>
+            </li>
+            <li>
+                <a href="#">淘宝</a>
+            </li>
+            <li class="disabled">
+                <a href="#">禁用</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="student in students">{{student.name}}</li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                students : [
+                    {name: 'zhangsan'},
+                    {name: 'lisi'},
+                    {name: 'wangwu'},
+                    {name: 'zhaoliu'},
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
