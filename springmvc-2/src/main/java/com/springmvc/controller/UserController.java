@@ -14,6 +14,7 @@ import java.util.*;
 
 @Controller
 @RequestMapping(value = "/user")
+@SessionAttributes(value = {"user"})
 public class UserController {
 
     @ResponseBody

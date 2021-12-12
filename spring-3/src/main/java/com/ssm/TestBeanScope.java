@@ -8,7 +8,7 @@ public class TestBeanScope {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         HelloSpring hs1 = (HelloSpring) context.getBean("helloSpring");
         HelloSpring hs2 = (HelloSpring) context.getBean("helloSpring");
-//        System.out.println(hs1 == hs2); //scope="singleton" true
-        System.out.println(hs1 == hs2); //scope="prototype" false
+        System.out.println(hs1 == hs2); //scope="singleton" true
+//        System.out.println(hs1 == hs2); //scope="prototype" false
     }
 }

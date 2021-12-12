@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ccms:war">
+    <output-path>$PROJECT_DIR$/../ccms/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ccms</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ccms-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ccms:war exploded" />
+    </root>
+  </artifact>
+</component>

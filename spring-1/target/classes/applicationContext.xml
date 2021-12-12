@@ -16,7 +16,7 @@
 		<constructor-arg name="name" value="admin" />
 		<constructor-arg name="pwd" value="123456" />
 	</bean>
-
+<!--	使用p命名空间法注入-->
     <bean id="admin" class="com.ssm.AdminInfo" p:id="8" p:name="yzpc"
 			p:pwd="yzpc"/>
 	

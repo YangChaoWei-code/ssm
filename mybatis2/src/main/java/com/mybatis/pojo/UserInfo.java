@@ -1,7 +1,7 @@
 package com.mybatis.pojo;
 
 public class UserInfo {
-    private int id;
+    private int uid;
     private String uname;
     private String upass;
     private String realName;
@@ -11,12 +11,12 @@ public class UserInfo {
     private String regDate;
     private int status;
 
-    public int getId() {
-        return id;
+    public int getUid() {
+        return uid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
     public String getUname() {
@@ -85,6 +85,6 @@ public class UserInfo {
 
     @Override
     public String toString() {
-        return "UserInfo [id=" + id + ", userName=" + uname + ", password=" + upass + "]";
+        return "UserInfo [id=" + uid + ", userName=" + uname + ", password=" + upass + "]";
     }
 }

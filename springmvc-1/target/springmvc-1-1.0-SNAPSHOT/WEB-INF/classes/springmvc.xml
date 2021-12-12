@@ -10,10 +10,14 @@
        http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-<!--    配置自动扫描的包-->
+<!--    &lt;!&ndash;    配置处理器Handle，映射为"/hello"请求&ndash;&gt;-->
+<!--    <bean name="/hello" class="com.springmvc.controller.HelloController"/>-->
+<!--    &lt;!&ndash;    配置视图解析器，将控制器方法返回的逻辑视图解析为物理视图&ndash;&gt;-->
+<!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>-->
+    <!--    配置自动扫描的包-->
     <context:component-scan base-package="com.springmvc" />
     <mvc:annotation-driven />
-<!--    配置视图解析器，将控制器方法返回的逻辑视图解析为物理视图-->
+    <!--    配置视图解析器，将控制器方法返回的逻辑视图解析为物理视图-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/ch06/"></property>
         <property name="suffix" value=".jsp"></property>

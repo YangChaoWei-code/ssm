@@ -6,14 +6,14 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- 配置一个bean，将指定类配置给Spring，让Spring来创建其对象的实例 -->
-<!--	<bean id="helloSpring" class="com.ssm.HelloSpring" scope="singleton">-->
-<!--		&lt;!&ndash; 为属性赋值 &ndash;&gt;-->
-<!--		<property name="userName" value="张三"></property>-->
-<!--	</bean>-->
-	<bean id="helloSpring" class="com.ssm.HelloSpring" scope="prototype">
+	<bean id="helloSpring" class="com.ssm.HelloSpring" scope="singleton">
 		<!-- 为属性赋值 -->
 		<property name="userName" value="张三"></property>
 	</bean>
+<!--	<bean id="helloSpring" class="com.ssm.HelloSpring" scope="prototype">-->
+<!--		&lt;!&ndash; 为属性赋值 &ndash;&gt;-->
+<!--		<property name="userName" value="张三"></property>-->
+<!--	</bean>-->
 
 	<bean id="adminInfo" class="com.ssm.AdminInfo">
 		<property name="id" value="5"></property>

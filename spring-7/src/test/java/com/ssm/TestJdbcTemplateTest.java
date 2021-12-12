@@ -80,7 +80,7 @@ public void findUserByIdTest(){
     // 通过容器，获取UserDAO的实例
     UserDAO userDAO = (UserDAO) ctx.getBean("userDAO");
     // 执行findUserById()方法，获取User对象
-    User user = userDAO.findUserById(1);
+    User user = userDAO.findUserById(3);
     System.out.println(user);
 }
 

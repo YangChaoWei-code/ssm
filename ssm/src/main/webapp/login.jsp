@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/userinfo/login" method="post">
+<form action="userinfo/login" method="post">
     <table>
         <tr>
             <td>用户名: </td>

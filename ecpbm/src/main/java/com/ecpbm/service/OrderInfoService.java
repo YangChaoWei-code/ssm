@@ -23,7 +23,7 @@ public interface OrderInfoService {
     // 根据订单编号获取订单信息
     public OrderInfo getOrderInfoById(int id);
 
-    // 更加订单编号获取订单明细信息
+    // 根据订单编号获取订单明细信息
     public List<OrderDetail> getOrderDetailByOid(int oid);
 
     // 删除订单

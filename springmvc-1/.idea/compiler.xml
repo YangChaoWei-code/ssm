@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="ccms" target="8" />
       <module name="easyui_demo" target="8" />
       <module name="ecpbm" target="8" />
       <module name="mybatis1" target="8" />
@@ -16,6 +17,7 @@
       <module name="mybatis9" target="8" />
       <module name="springmvc-1" target="8" />
       <module name="springmvc-2" target="8" />
+      <module name="springmvc-2_1" target="8" />
       <module name="springmvc-3" target="8" />
       <module name="springmvc-4" target="8" />
       <module name="springmvc-5" target="8" />
@@ -25,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ccms" options="-proc:none -parameters" />
       <module name="easyui_demo" options="-proc:none -parameters" />
       <module name="ecpbm" options="-proc:none -parameters" />
       <module name="mybatis1" options="-proc:none -parameters" />
@@ -39,6 +42,7 @@
       <module name="mybatis9" options="-proc:none -parameters" />
       <module name="springmvc-1" options="-proc:none -parameters" />
       <module name="springmvc-2" options="-proc:none -parameters" />
+      <module name="springmvc-2_1" options="-proc:none -parameters" />
       <module name="springmvc-3" options="-proc:none -parameters" />
       <module name="springmvc-4" options="-proc:none -parameters" />
       <module name="springmvc-5" options="-proc:none -parameters" />

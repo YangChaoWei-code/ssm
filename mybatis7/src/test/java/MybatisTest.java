@@ -51,7 +51,7 @@ public class MybatisTest {
         UserInfoMapper uim = sqlSession.getMapper(UserInfoMapper.class);
         // 创建UserInfo对象，用于封装查询条件
         UserInfo cond = new UserInfo();
-//        cond.setUserName("j");
+        cond.setUserName("j");
         // 直接调用接口的方法，根据条件查询UserInfo对象
         List<UserInfo> uis = uim.findUserInfoByUserNameWithIf(cond);
         for (UserInfo ui : uis) {
@@ -96,7 +96,7 @@ public class MybatisTest {
         UserInfoMapper uim = sqlSession.getMapper(UserInfoMapper.class);
         // 创建UserInfo对象，用于封装查询条件
         UserInfo cond = new UserInfo();
-//        cond.setUserName("j");
+        cond.setUserName("j");
         cond.setStatus(1);
         // 直接调用接口的方法，根据条件查询UserInfo对象
         List<UserInfo> uis = uim.findUserInfoByUserNameWithIf_Trim(cond);
@@ -126,7 +126,7 @@ public class MybatisTest {
         UserInfoMapper uim = sqlSession.getMapper(UserInfoMapper.class);
         // 创建UserInfo对象，用于封装查询条件
         UserInfo cond = new UserInfo();
-//        cond.setUserName("j");
+        cond.setUserName("j");
         cond.setStatus(1);
         // 直接调用接口的方法，根据条件查询UserInfo对象
         List<UserInfo> uis = uim.findUserInfo_Choose(cond);
